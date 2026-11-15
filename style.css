@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101828, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+header p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #475569;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+.search-box input:focus {
+    border-color: #38bdf8;
+}
+
+.search-box button {
+    padding: 15px 25px;
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
+}
+
+#message {
+    color: #fca5a5;
+    margin-bottom: 15px;
+}
+
+.country-card {
+    background: #ffffff;
+    color: #1e293b;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.country-card img {
+    width: 180px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.country-card h2 {
+    font-size: 27px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.details {
+    text-align: left;
+    display: grid;
+    gap: 12px;
+}
+
+.details p {
+    background: #f1f5f9;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.details strong {
+    color: #0369a1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .country-card {
+        padding: 20px;
+    }
+}
